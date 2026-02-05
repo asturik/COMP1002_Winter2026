@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<!-- Alex Sturik - Lab# 2 -->
+<html lang="en"> <!-- Language of the document -->
+
+<head>
+ <meta charset="UTF-8"> <!-- Allows special Characters -->
+ <title>User Registration Form</title>
+
+<!-- CSS Stuff-->
+
+<style>
+    /* Element Container*/
+    body {
+        background-color: #f4f6f8;
+        font-family: Arial, Helvetica, sans-serif;
+    }
+    /*Class Selector*/
+    .form-container {
+        border: 2px solid #BDEDFF;
+        padding: 20px;
+        margin: 50px auto;
+        width: 600px;
+        background-color: white;
+    }
+    /*Element Selector*/
+    legend {
+        color: #17d0d3;
+        font-size: 18px;
+    }
+    /*Attribute Selector*/
+    input[type="text"],
+    input[type="email"],
+    input[type="password"],
+    textarea,
+    select {
+        padding: 8px;
+        margin-top: 5px;
+        margin-bottom: 10px; 
+        border: 1px solid #ccc;
+        border-radius: 4px;
+    }
+    /*Element Selector*/
+    label {
+        font-weight: bold;
+        font-style: italic;
+    }
+    /*ID Selector*/
+    #submitBtn {
+        background-color: #BDADFF;
+        color: white;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+    }
+    /* Pseudo-class Selector*/
+    input:focus,
+    textarea:focus,
+    select:focus {
+        border-color: #23c5f2;
+        outline: none;
+    }
+
+</style>
+</head>
+
+<body>
+
+
+
+<form method="post" action="">
+ <fieldset class="form-container">
+  <legend><b>User Registration Form</b></legend> <!-- Title of the form -->
+  <table cellpadding="8"> <!-- Adds spacing between the text and border -->
+
+   <tr>
+    <td>
+     <label for="firstName"><b>First Name: *</b></label><br> <!-- First Name (Required)-->
+     <input type="text" id="firstName" name="firstName" placeholder="First Name" required>
+    </td>
+
+    <td>
+     <label for="lastName"><b>Last Name: *</b></label><br> <!-- Last Name (Required)-->
+     <input type="text" id="lastName" name="lastName" placeholder="Last Name" required>
+    </td>
+   </tr>
+
+
+   <tr>
+    <td colspan="2"> <!-- Spans accross both columns -->
+     <label for="email"><b>Email Address: *</b></label><br> <!-- Email Address (Required)-->
+     <input type="email" id="email" name="email" placeholder="example@domain.com" size="55" required>
+    </td>
+   </tr>
+
+
+   <tr>
+    <td>
+     <label for="password"><b>Password: *</b></label><br> <!-- Password (Required) -->
+     <input type="password" id="password" name="password" placeholder="Enter password" minlength="8" required>
+    </td>
+
+    <td>
+     <label for="confirmPassword"><b>Confirm Password: *</b></label><br> <!-- Re-type Password (Required) -->
+     <input type="password" id="confirmPassword" name="confirmPassword" placeholder="Re-type password" minlength="8" required>
+    </td>
+   </tr>
+
+
+   <tr>
+    <td colspan="2"> <!-- Spans accross both columns -->
+     <label for="dob"><b>Date of Birth: *</b></label><br> <!-- Date of Birth (Required) -->
+     <input type="date" id="dob" name="dob" required>
+    </td>
+   </tr>
+
+
+   <tr>
+    <td colspan="2"> <!-- Spans accross both columns -->
+      <fieldset>
+        <legend><b>Gender:</b></legend> <!-- Gender (Optional) -->
+
+            <input type="radio" id="male" name="gender" value="male">
+            <label for="male">Male</label> <!--Option# 1-->
+
+            <input type="radio" id="female" name="gender" value="female">
+            <label for="female">Female</label> <!--Option# 2-->
+
+            <input type="radio" id="other" name="gender" value="other">
+            <label for="other">Other</label> <!--Option# 3-->
+
+      </fieldset>
+    </td>
+   </tr>
+
+
+   <tr>
+    <td colspan="2"> <!-- Spans accross both columns -->
+      <fieldset>
+        <legend><b>Preferences:</b></legend> <!--Preferences (Optional)-->
+
+            <!-- Checkbox of "Newsletter" (Optional) -->
+            <input type="checkbox" id="newsletter" name="newsletter">
+            <label for="newsletter">Subscribe to Newsletter</label><br>
+
+            <!-- Checkbox of "Terms and Conditions" (Optional) -->
+            <input type="checkbox" id="terms" name="terms">
+            <label for="terms">I agree to the Terms &amp; Conditions</label>
+
+      </fieldset>
+    </td>
+   </tr>
+
+
+   <tr>
+     <td colspan="2"> <!-- Spans accross both columns -->
+        <label for="country"><b>Country: *</b></label><br> <!-- Select Country (Required) -->
+        <select id="country" name="country" required>
+
+            <option value="">Select Country</option> <!-- Placeholder option -->
+            <option value="canada">Canada</option>      <!--Option# 1-->
+            <option value="usa">United States</option>  <!--Option# 2-->
+            <option value="uk">United Kingdom</option>  <!--Option# 3-->
+            <option value="mexico">Mexico</option>      <!--Option# 4-->
+            <option value="australia">Australia</option><!--Option# 5-->
+            <option value="other">Other</option>        <!--Option# 6-->
+
+        </select>
+    </td>
+   </tr>
+
+
+
+   <tr>
+    <td colspan="2"> <!-- Spans accross both columns -->
+     <label for="comments"><b>Comments:</b></label><br> <!-- Textarea for additional comments (Optional) -->
+     <textarea id="comments" name="comments" rows="4" cols="60" placeholder="Any additional information"></textarea>
+    </td>
+   </tr>
+
+
+
+   <tr>
+    <td colspan="2"> <!-- Spans accross both columns -->
+     <input type="submit" id="submitBtn" value="Submit"> <!-- Submit Button -->
+    </td>
+   </tr>
+
+
+  </table>
+ </fieldset>
+</form>
+
+
+</body>
+</html>
